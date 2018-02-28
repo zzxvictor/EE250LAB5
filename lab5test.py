@@ -33,6 +33,10 @@ while True:
         values = mcp.read_adc(0)
         print('read light sensor')
         print(values)
+        if values>300:
+            print('bright')
+            else:
+                print('dark')
         time.sleep(0.1)
     for i in range(4):
         #turn LED one

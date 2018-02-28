@@ -35,8 +35,8 @@ while True:
         print(values)
         if values>300:
             print('bright')
-            else:
-                print('dark')
+        else:
+            print('dark')
         time.sleep(0.1)
     for i in range(4):
         #turn LED one

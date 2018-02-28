@@ -51,6 +51,10 @@ while True:
         #read light sensor
         values = mcp.read_adc(1)
         print('read sound sensor')
+        if values >300:
+            GPIO.output(11,GPIO.HIGH)
+        else:
+            GPIO.output(11,GPIO.LOW)
         print(values)
         time.sleep(0.1)
     for i in range(4):

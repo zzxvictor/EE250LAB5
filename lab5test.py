@@ -5,6 +5,7 @@ import time
 # Import SPI library (for hardware SPI) and MCP3008 library.
 import Adafruit_GPIO.SPI as SPI
 import Adafruit_MCP3008
+import RPI.GPIO as GPIO
 
 # Hardware SPI configuration:
 SPI_PORT   = 0
@@ -18,9 +19,11 @@ while True:
     #blink for 5 times with interval of 500ms
     for i in range(5):
         #turn LED one
+        GPIO.output(11,GPIO.HIGH)
         print('turn LED On')
         time.sleep(0.5)
         #turn LED off
+        GPIO.output(11,GPIO.LOW)
         print('LED off')
         time.sleep(0.5)
     for i in range(50):
@@ -29,9 +32,11 @@ while True:
         time.sleep(0.1)
     for i in range(4):
         #turn LED one
+        GPIO.output(11,GPIO.HIGH)
         print('turn LED On')
         time.sleep(0.2)
         #turn LED off
+        GPIO.output(11,GPIO.LOW)
         print('LED off')
         time.sleep(0.2)
     for i in range(50):
@@ -40,9 +45,11 @@ while True:
         time.sleep(0.1)
     for i in range(4):
         #turn LED one
+        GPIO.output(11,GPIO.HIGH)
         print('turn LED On')
         time.sleep(0.2)
         #turn LED off
+        GPIO.output(11,GPIO.LOW)
         print('LED off')
         time.sleep(0.2)
     

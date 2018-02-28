@@ -33,7 +33,7 @@ while True:
         values = mcp.read_adc(0)
         print('read light sensor')
         print(values)
-        if values>300:
+        if values>450:
             print('bright')
         else:
             print('dark')

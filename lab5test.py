@@ -8,6 +8,8 @@ import Adafruit_MCP3008
 import RPI.GPIO as GPIO
 
 # Hardware SPI configuration:
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(11, GPIO.OUT)
 SPI_PORT   = 0
 SPI_DEVICE = 0
 mcp = Adafruit_MCP3008.MCP3008(spi=SPI.SpiDev(SPI_PORT, SPI_DEVICE))

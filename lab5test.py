@@ -30,7 +30,9 @@ while True:
         time.sleep(0.5)
     for i in range(50):
         #read light sensor
+        values = mcp.read_adc(0)
         print('read light sensor')
+        print(values)
         time.sleep(0.1)
     for i in range(4):
         #turn LED one
@@ -43,7 +45,9 @@ while True:
         time.sleep(0.2)
     for i in range(50):
         #read light sensor
+        values = mcp.read_adc(1)
         print('read sound sensor')
+        print(values)
         time.sleep(0.1)
     for i in range(4):
         #turn LED one
